@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<office updated="2020/01/19-12:09">
+    <account id="chk" name="Checking" balance="17.29">
+        <transaction dtime="2020/01/06-00:00" amount="215.0" type="Basic" check="" vendor="HHills" comment="association fee" user="Pavel" confirmed="true"/>
+        <transaction dtime="2020/01/11-00:00" amount="43.05" type="Payment" check="" vendor="CitiMC5" comment="2444" user="Pavel" confirmed="true"/>
+    </account>
+    <account id="pchk" name="Peter" balance="0.0"/>
+    <account id="ct5" name="Citi5" balance="-43.05">
+        <transaction dtime="2020/01/11-00:00" amount="-43.05" type="Payment" check="" vendor="CitiMC5" comment="2444" user="Pavel" confirmed="true"/>
+    </account>
+</office>

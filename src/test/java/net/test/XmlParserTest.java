@@ -19,16 +19,16 @@ class XmlParserTest {
 
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
-        InputStream input = getClass().getClassLoader().getResourceAsStream("test.xml");
+        InputStream input = getClass().getClassLoader().getResourceAsStream("xml/test.xml");
         parser.parse(input, new DefaultHandler());
     }
 
     @Test
     void validate() throws Exception {
 
-        InputStream input = getClass().getClassLoader().getResourceAsStream("test.xml");
+        InputStream input = getClass().getClassLoader().getResourceAsStream("xml/test.xml");
 
-        InputStream schemaStream = getClass().getClassLoader().getResourceAsStream("test.xsd");
+        InputStream schemaStream = getClass().getClassLoader().getResourceAsStream("xml/test.xsd");
         SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
         Schema schema = schemaFactory.newSchema(new StreamSource(schemaStream));
         Validator validator = schema.newValidator();
