@@ -1,0 +1,38 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:annotation>
+        <xsd:documentation xml:lang="en">
+            JXOffice
+        </xsd:documentation>
+    </xsd:annotation>
+
+    <xsd:element name="office" type="OfficeType"/>
+
+    <xsd:complexType name="OfficeType">
+        <xsd:sequence maxOccurs="unbounded">
+            <xsd:element name="account" type="AccountType" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="updated" type="xsd:string"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="AccountType">
+        <xsd:sequence maxOccurs="unbounded">
+            <xsd:element name="transaction" type="TransactionType" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:string"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="balance" type="xsd:double" use="required"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="TransactionType">
+        <xsd:attribute name="dtime" type="xsd:string" use="required"/>
+        <xsd:attribute name="amount" type="xsd:double" use="required"/>
+        <xsd:attribute name="type" type="xsd:string" use="required"/>
+        <xsd:attribute name="check" type="xsd:string" use="required"/>
+        <xsd:attribute name="vendor" type="xsd:string" use="required"/>
+        <xsd:attribute name="comment" type="xsd:string" use="required"/>
+        <xsd:attribute name="user" type="xsd:string" use="required"/>
+        <xsd:attribute name="confirmed" type="xsd:boolean" use="required"/>
+    </xsd:complexType>
+
+</xsd:schema>
